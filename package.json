@@ -1,6 +1,6 @@
 {
   "name": "node-ico-watchlist-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nodejs wrapper for icowatchlist.com",
   "main": "index.js",
   "scripts": {
