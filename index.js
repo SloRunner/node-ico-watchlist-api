@@ -1,46 +1,49 @@
 var request = require('request');
-var apiurl = 'https://api.icowatchlist.com/public/v1/';
 
-exports.getAll = function(callback){
-  request(apiurl, function (error, response, json) {
-    if (!error && response.statusCode == 200) {
-      var retjson = JSON.parse(json);
-      callback(true,retjson);
-    } else {
-      callback(false,"");
-    }
-  });
-};
+class icowatchlistAPI{
+  constructor(){
+    this.apiurl = 'https://api.icowatchlist.com/public/v1/'
+  }
+  getAll(callback){
+    request(this.apiurl, function (error, response, json) {
+      if (!error && response.statusCode == 200) {
+        var retjson = JSON.parse(json);
+        callback(true,retjson);
+      } else {
+        callback(false,"");
+      }
+    });
+  }
+  getLive(callback){
+    request(this.apiurl + 'live', function (error, response, json) {
+      if (!error && response.statusCode == 200) {
+        var retjson = JSON.parse(json);
+        callback(true,retjson);
+      } else {
+        callback(false,"");
+      }
+    });
+  }
+  getUpcoming(callback){
+    request(this.apiurl + 'upcoming', function (error, response, json) {
+      if (!error && response.statusCode == 200) {
+        var retjson = JSON.parse(json);
+        callback(true,retjson);
+      } else {
+        callback(false,"");
+      }
+    });
+  }
+  getFinished(callback){
+    request(this.apiurl + 'finished', function (error, response, json) {
+      if (!error && response.statusCode == 200) {
+        var retjson = JSON.parse(json);
+        callback(true,retjson);
+      } else {
+        callback(false,"");
+      }
+    });
+  }
+}
 
-exports.getLive = function(callback){
-  request(apiurl + 'live', function (error, response, json) {
-    if (!error && response.statusCode == 200) {
-      var retjson = JSON.parse(json);
-      callback(true,retjson);
-    } else {
-      callback(false,"");
-    }
-  });
-};
-
-exports.getUpcoming = function(callback){
-  request(apiurl + 'upcoming', function (error, response, json) {
-    if (!error && response.statusCode == 200) {
-      var retjson = JSON.parse(json);
-      callback(true,retjson);
-    } else {
-      callback(false,"");
-    }
-  });
-};
-
-exports.getFinished = function(callback){
-  request(apiurl + 'finished', function (error, response, json) {
-    if (!error && response.statusCode == 200) {
-      var retjson = JSON.parse(json);
-      callback(true,retjson);
-    } else {
-      callback(false,"");
-    }
-  });
-};
+module.exports = icowatchlistAPI

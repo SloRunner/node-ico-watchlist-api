@@ -5,14 +5,15 @@ Nodejs wrapper for icowatchlist.com
 [![NPM](https://nodei.co/npm/node-ico-watchlist-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-ico-watchlist-api/)
 
 ## API Implementation
-
+Check examples folder for more info
 ```javascript
-var icoapi = require('node-ico-watchlist-api');
-icoapi.getAll(function(resp,data){
+const icowatchlistAPI = require('node-ico-watchlist-api'); // use node-ico-watchlist-api in production
+const ico = new icowatchlistAPI()
+ico.getFinished(function(resp,data){
   if(resp){
     console.log(JSON.stringify(data))
   } else {
-    console.log('Error');
+    console.log('\nError');
   }
 })
 
