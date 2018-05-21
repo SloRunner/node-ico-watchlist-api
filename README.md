@@ -1,6 +1,7 @@
 # node-ico-watchlist-api
 Nodejs wrapper for icowatchlist.com
 
+[![Build Status](https://travis-ci.org/SloRunner/node-ico-watchlist-api.svg?branch=master)](https://travis-ci.org/SloRunner/node-ico-watchlist-api)
 
 [![NPM](https://nodei.co/npm/node-ico-watchlist-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-ico-watchlist-api/)
 
