@@ -1,6 +1,6 @@
-var request = require('request');
+const request = require('request');
 
-class icowatchlistAPI{
+module.exports = class icowatchlistAPI{
   constructor(){
     this.apiurl = 'https://api.icowatchlist.com/public/v1/'
   }
@@ -45,5 +45,3 @@ class icowatchlistAPI{
     });
   }
 }
-
-module.exports = icowatchlistAPI
