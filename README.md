@@ -1,9 +1,9 @@
 # node-ico-watchlist-api
 Nodejs wrapper for icowatchlist.com
 
-[![Build Status](https://travis-ci.org/SloRunner/node-ico-watchlist-api.svg?branch=master)](https://travis-ci.org/SloRunner/node-ico-watchlist-api)
+[![Build Status](https://travis-ci.org/SloRunner/node-ico-watchlist-api.svg?branch=master)](https://travis-ci.org/SloRunner/node-ico-watchlist-api) [![Greenkeeper badge](https://badges.greenkeeper.io/SloRunner/node-ico-watchlist-api.svg)](https://greenkeeper.io/)
 
-[![NPM](https://nodei.co/npm/node-ico-watchlist-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-ico-watchlist-api/) [![Greenkeeper badge](https://badges.greenkeeper.io/SloRunner/node-ico-watchlist-api.svg)](https://greenkeeper.io/)
+[![NPM](https://nodei.co/npm/node-ico-watchlist-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-ico-watchlist-api/)
 
 ## API Implementation
 Check examples folder for more info
