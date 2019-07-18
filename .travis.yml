@@ -9,3 +9,7 @@ node_js:
   - "10"
   - "11"
   - "12"
+  - "latest"
+cache:
+  directories:
+    - "node_modules"
