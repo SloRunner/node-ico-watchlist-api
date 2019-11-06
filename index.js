@@ -1,12 +1,16 @@
 'use strict'
 const request = require('request');
 
+var browser = request.defaults({
+  headers: {'User-Agent': 'The Botfather NodeJS module (https://nodei.co/npm/node-ico-watchlist-api/)'}
+})
+
 module.exports = class icowatchlistAPI{
   constructor(){
     this.apiurl = 'https://api.icowatchlist.com/public/v1/'
   }
   getAll(callback){
-    request(this.apiurl, function (error, response, json) {
+    browser(this.apiurl, function (error, response, json) {
       if (!error && response.statusCode == 200) {
         var retjson = JSON.parse(json);
         callback(true,retjson);
@@ -16,7 +20,7 @@ module.exports = class icowatchlistAPI{
     });
   }
   getLive(callback){
-    request(this.apiurl + 'live', function (error, response, json) {
+    browser(this.apiurl + 'live', function (error, response, json) {
       if (!error && response.statusCode == 200) {
         var retjson = JSON.parse(json);
         callback(true,retjson);
@@ -26,7 +30,7 @@ module.exports = class icowatchlistAPI{
     });
   }
   getUpcoming(callback){
-    request(this.apiurl + 'upcoming', function (error, response, json) {
+    browser(this.apiurl + 'upcoming', function (error, response, json) {
       if (!error && response.statusCode == 200) {
         var retjson = JSON.parse(json);
         callback(true,retjson);
@@ -36,7 +40,7 @@ module.exports = class icowatchlistAPI{
     });
   }
   getFinished(callback){
-    request(this.apiurl + 'finished', function (error, response, json) {
+    browser(this.apiurl + 'finished', function (error, response, json) {
       if (!error && response.statusCode == 200) {
         var retjson = JSON.parse(json);
         callback(true,retjson);
